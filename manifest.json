@@ -1,0 +1,19 @@
+{
+  "name": "remotestorage cube",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "remotestorage authentication app",
+  "browser_action": {
+    "default_icon": "icon_anonymous.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["remoteStorage-debug.js", "background.js"]
+  },
+  "permissions": [
+    "tabs",
+    "bookmarks",
+    "http://*/*",
+    "https://*/*"
+  ]
+}
