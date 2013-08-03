@@ -3,12 +3,15 @@
   "version": "0.1",
   "manifest_version": 2,
   "description": "remotestorage authentication app",
+  "icons" : {
+    "128": "icon_connected.png"
+  },
   "browser_action": {
     "default_icon": "icon_anonymous.png",
     "default_popup": "popup.html"
   },
   "background": {
-    "scripts": ["remoteStorage-debug.js", "background.js"]
+    "scripts": ["remotestorage.js", "background.js"]
   },
   "permissions": [
     "tabs",

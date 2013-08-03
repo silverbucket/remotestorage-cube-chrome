@@ -9,7 +9,7 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo) {
     // has been recovered from fragment.
     if(changeInfo.url && changeInfo.url.match(/^chrome\-extension:\/\/.*#$/)) {
       chrome.tabs.remove(Number(authTabId));
-      localStorage.removeItem('auth-tab-id')
+      localStorage.removeItem('auth-tab-id');
     }
   }
 });
@@ -19,9 +19,9 @@ window.onload = function() {
   div.setAttribute('id', 'remotestorage-connect');
   document.body.appendChild(div);
 
-  remoteStorage.defineModule('bookmarks', function() { return { exports: {} } });
+  remoteStorage.defineModule('bookmarks', function() { return { exports: {} }; });
 
   remoteStorage.claimAccess({'bookmarks':'rw'});
   remoteStorage.displayWidget('remotestorage-connect');
 
-}
+};
